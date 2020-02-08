@@ -1,0 +1,34 @@
+import React from 'react';
+import Card from '../ui-kit/Card';
+import CatPageDisplayContainer from './CatPageDisplayContainer';
+import { View, StyleSheet } from 'react-native';
+import { cardHeight, tabDetails } from '../utils/constants';
+import useWidthHeight from './ScreenWidthHeightProvider';
+import pageContentAndImageProvider from './PageContentAndImageProvider';
+
+
+
+const TabContentContainer = () => {
+    //const screenWidth = Dimensions.get('window').width;
+    const { screenWidth, screenHeight } = useWidthHeight();
+    
+    return (<React.Fragment>
+        {tabDetails.map((tab) => {
+            const { header, content } = pageContentAndImageProvider(tab.tabId);
+            return (<View key={`tabContent-${tab.tabId}`} style={[styles.cardContainer, { height: screenHeight }]}>
+                <Card width={'100%'} height={cardHeight}>
+                    <CatPageDisplayContainer imageWidth={screenWidth} header={header} content={content} />
+                </Card>
+            </View>)
+        })
+        }
+       </React.Fragment>)
+}
+const styles = StyleSheet.create({
+    cardContainer: {
+        margin: 10,
+        alignItems: "center",
+        justifyContent: 'center',
+    }
+})
+export default TabContentContainer;
