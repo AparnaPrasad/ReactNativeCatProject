@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CatPageDisplayContainer should render correctly should render image with given url and given wodth 1`] = `ShallowWrapper {}`;

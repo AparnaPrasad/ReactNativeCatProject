@@ -1,8 +1,8 @@
-import rootReducer, { ApplicationState } from './';
+import rootReducer from './';
 import { compose, applyMiddleware, createStore } from 'redux';
 import thunk from 'redux-thunk';
 
-export default function configureStore(/*_initialState?: ApplicationState*/) {
+export default function configureStore() {
 
     const enhancers = [];
     const windowIfDefined = typeof window === 'undefined' ? null : window as any;

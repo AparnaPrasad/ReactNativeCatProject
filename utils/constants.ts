@@ -7,7 +7,8 @@ interface T_TabDetails {
 export enum TabIdEnum {
     HOME,
     ABOUT,
-    CUSTOMIZE
+    CUSTOMIZE,
+    INPUT
 }
 
 export const cardHeight = 450;
@@ -18,7 +19,7 @@ export const tabDetails: T_TabDetails[] = [
     {
         tabId: TabIdEnum.HOME,
         tabName: 'Home',
-        tabImageUrl: `${imageUrlBase}${imageHeight+TabIdEnum.HOME}` //adding to get random inage for different cards
+        tabImageUrl: `${imageUrlBase}${imageHeight+TabIdEnum.HOME}` //adding enum val to get different images for different cards
         
     },
     {
@@ -30,6 +31,11 @@ export const tabDetails: T_TabDetails[] = [
         tabId: TabIdEnum.CUSTOMIZE,
         tabName: 'Customize',
         tabImageUrl: `${imageUrlBase}${imageHeight+TabIdEnum.CUSTOMIZE}`
+    },
+    {
+        tabId: TabIdEnum.INPUT,
+        tabName: 'Input',
+        tabImageUrl: `${imageUrlBase}${imageHeight + TabIdEnum.INPUT}`
     }
 ]
 
@@ -37,3 +43,5 @@ export const tabDetails: T_TabDetails[] = [
 export const defaultBackgroundColor = '#ebf6ff';
 
 export const tabHeight = 80;
+
+export const loremIpsumText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Vestibulum morbi blandit cursus risus at ultrices mi. Sit amet est placerat in egestas erat imperdiet sed euismod. A lacus vestibulum sed arcu non odio euismod lacinia."
