@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, ScrollView } from 'react-native';
-import { TabIdEnum, tabHeight } from '../utils/constants';
+import { TabIdEnum } from '../utils/constants';
 import PageTabs from './PageTabs';
 import TabContentContainer from './TabContentContainer';
 import useWidthHeight from './ScreenWidthHeightProvider';
@@ -13,7 +13,7 @@ interface ReduxProps {
 
 export default function ReactPage() {
     const [selectedTab, setSelectedTab] = React.useState(0)
-    const scrollRef = React.useRef();
+    const scrollRef = React.useRef(null);
     const { screenHeight } = useWidthHeight();
     //const effectiveHeight = screenHeight;
     const { backgroundColor } = useSelector<ApplicationState, ReduxProps>((state: ApplicationState) => {
