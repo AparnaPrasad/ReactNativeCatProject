@@ -17,7 +17,7 @@ const TabContentContainer = () => {
             const { header, content } = pageContentAndImageProvider(tab.tabId);
             return (<View key={`tabContent-${tab.tabId}`} style={[styles.cardContainer, { height: screenHeight }]}>
                 <Card width={'100%'} height={cardHeight}>
-                    <CatPageDisplayContainer imageWidth={screenWidth} header={header} content={content} />
+                    <CatPageDisplayContainer imageWidth={screenWidth} imageUrl={tab.tabImageUrl} header={header} content={content} />
                 </Card>
             </View>)
         })
@@ -26,9 +26,10 @@ const TabContentContainer = () => {
 }
 const styles = StyleSheet.create({
     cardContainer: {
-        margin: 10,
+        marginHorizontal: 10,
         alignItems: "center",
-        justifyContent: 'center',
+        justifyContent: 'center'
+        
     }
 })
 export default TabContentContainer;

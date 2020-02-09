@@ -17,8 +17,6 @@ const PageTabs = ({ selectTab }: IOwnProps) => {
 
 const styles = StyleSheet.create({
     tabContainer: {
-        //marginTop: 30,
-        //marginTop:20,
         width: '100%',
         backgroundColor: '#ebebeb',
         paddingTop: 30,
@@ -26,17 +24,11 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center',
         height: 80
-        //height: 70,
-        //marginTop: 30,
-        //backgroundColor: '#0d0d0d'
-
     },
     tabItem: {
         padding: 10,
-        //marginTop: 10,
         borderColor: 'white',
         borderWidth: 1
-        //height: 50
     }
 });
 

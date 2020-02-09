@@ -10,25 +10,30 @@ export enum TabIdEnum {
     CUSTOMIZE
 }
 
+export const cardHeight = 450;
+const imageUrlBase = 'https://cataas.com/cat?height=';
+const imageHeight = cardHeight / 2;
+
 export const tabDetails: T_TabDetails[] = [
     {
         tabId: TabIdEnum.HOME,
         tabName: 'Home',
-        tabImageUrl: '',
+        tabImageUrl: `${imageUrlBase}${imageHeight+TabIdEnum.HOME}` //adding to get random inage for different cards
         
     },
     {
         tabId: TabIdEnum.ABOUT,
         tabName: 'About',
-        tabImageUrl: ''
+        tabImageUrl: `${imageUrlBase}${imageHeight+TabIdEnum.ABOUT}`
     },
     {
         tabId: TabIdEnum.CUSTOMIZE,
         tabName: 'Customize',
-        tabImageUrl: ''
+        tabImageUrl: `${imageUrlBase}${imageHeight+TabIdEnum.CUSTOMIZE}`
     }
 ]
 
-export const cardHeight = 300;
 
-export const defaultBackgroundColor = '#4c4453';
+export const defaultBackgroundColor = '#ebf6ff';
+
+export const tabHeight = 80;

@@ -13,7 +13,6 @@ const pageContentAndImageProvider = (tabId: TabIdEnum) => { //A provider to prov
                 content
             }
         case TabIdEnum.ABOUT:
-
             return {
                 header: <AboutPageHeader />,
                 content: <AboutPageContent/>

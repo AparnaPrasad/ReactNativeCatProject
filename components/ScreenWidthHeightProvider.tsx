@@ -6,7 +6,7 @@ const useWidthHeight = () => {
     const [screenHeight, setScreenHeight] = useState(0);
 
     useEffect(() => {
-        setScreenWidth(Dimensions.get('window').width); 
+        setScreenWidth(Dimensions.get('window').width);
         setScreenHeight(Dimensions.get('window').height); 
     });
 

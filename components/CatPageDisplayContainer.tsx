@@ -1,25 +1,41 @@
 import React from 'react';
-import { View, Image } from 'react-native';
+import { View, Image, StyleSheet } from 'react-native';
 
 interface IOwnProps {
     imageWidth: number,
     header?: React.ReactNode,
-    content?: React.ReactNode
+    content?: React.ReactNode,
+    imageUrl: string
 }
 
-const CatPageDisplayContainer = ({ imageWidth, header, content }: IOwnProps) => {
-    return (<View style={{ flex: 1}}>
+const CatPageDisplayContainer = ({ imageWidth, header, content, imageUrl }: IOwnProps) => {
+    return (<View style={styles.imageAndContentContainer}>
         <Image
-            style={{ width: '100%', height: '50%' }}
-            source={{ uri: `https://cataas.com/cat?width=${imageWidth}&height=149` }} />
-        <View>
-            {header}
-        </View>
-        <View>
-            {content}
+            style={styles.catImageContainer}
+            source={{ uri: `${imageUrl}&width=${imageWidth}` }} />
+        <View style={styles.contentContainer}>
+            <View>
+                {header}
+            </View>
+            <View>
+                {content}
+            </View>
         </View>
         
     </View>)
 }
 
 export default CatPageDisplayContainer;
+
+const styles = StyleSheet.create({
+    imageAndContentContainer: {
+        flex: 1
+    },
+    catImageContainer: {
+        width: '100%',
+        height: '50%'
+    },
+    contentContainer: {
+        padding: 20
+    }
+})
